@@ -28,7 +28,7 @@ const TelaAuth = () => {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: 'green',
-    height: 100,
+    height: '10%',
     justifyContent: 'center',
     borderBottomWidth: 1,
     borderBottomColor: 'blue',
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     color: 'rgba(0, 0, 0, .6)',
-    paddingTop: 30,
+    paddingTop: '5%',
     textAlign: 'center',
     letterSpacing: 3
   },
@@ -49,13 +49,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '100%',
+    paddingBottom: '30%',
     backgroundColor: 'rgba(0, 0, 0, .2)'
   },
 
   viewContainer: {
     width: '100%',
     marginLeft: 80,
-    marginTop: 0
+    marginTop: 10
   },
 
   textInput: {

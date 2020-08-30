@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, KeyboardAvoidingView, Platform } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { TextInput, ScrollView } from 'react-native-gesture-handler';
 
 const TelaCadastroUsu = () => {
   return (
@@ -8,27 +8,29 @@ const TelaCadastroUsu = () => {
       <View style={styles.header}>
         <Text style={styles.headerText}>Cadastro de Usuário</Text>
       </View>
-      <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <View style={styles.viewContainer}>
-          <Text style={styles.textInput}>CPF</Text>
-          <TextInput keyboardType="numbers-and-punctuation" placeholder="Informe seu CPF..." style={styles.inputs} />
-        </View>
-        <View style={styles.viewContainer}>
-          <Text style={styles.textInput}>Nome</Text>
-          <TextInput keyboardType="default" placeholder="Informe seu Nome..." style={styles.inputs} />
-        </View>
-        <View style={styles.viewContainer}>
-          <Text style={styles.textInput}>E-mail</Text>
-          <TextInput keyboardType="email-address" placeholder="Informe seu E-mail..." style={styles.inputs} />
-        </View>
-        <View style={styles.viewContainer}>
-          <Text style={styles.textInput}>Senha</Text>
-          <TextInput secureTextEntry={true} placeholder="Informe sua Senha..." style={styles.inputs} />
-        </View>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>CADASTRAR</Text>
-        </TouchableOpacity>
-      </KeyboardAvoidingView>
+      <ScrollView>
+        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+          <View style={styles.viewContainer}>
+            <Text style={styles.textInput}>CPF</Text>
+            <TextInput keyboardType="numbers-and-punctuation" placeholder="Informe seu CPF..." style={styles.inputs} />
+          </View>
+          <View style={styles.viewContainer}>
+            <Text style={styles.textInput}>Nome</Text>
+            <TextInput keyboardType="default" placeholder="Informe seu Nome..." style={styles.inputs} />
+          </View>
+          <View style={styles.viewContainer}>
+            <Text style={styles.textInput}>E-mail</Text>
+            <TextInput keyboardType="email-address" placeholder="Informe seu E-mail..." style={styles.inputs} />
+          </View>
+          <View style={styles.viewContainer}>
+            <Text style={styles.textInput}>Senha</Text>
+            <TextInput secureTextEntry={true} placeholder="Informe sua Senha..." style={styles.inputs} />
+          </View>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>CADASTRAR</Text>
+          </TouchableOpacity>
+        </KeyboardAvoidingView>
+      </ScrollView>
     </>
   );
 }
@@ -36,7 +38,7 @@ const TelaCadastroUsu = () => {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: 'green',
-    height: 100,
+    height: '10%',
     justifyContent: 'center',
     borderBottomWidth: 1,
     borderBottomColor: 'blue', 
@@ -46,7 +48,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     color: 'rgba(0, 0, 0, .6)',
-    paddingTop: 30,
+    paddingTop: '5%',
     textAlign: 'center',
     letterSpacing: 3
   },
